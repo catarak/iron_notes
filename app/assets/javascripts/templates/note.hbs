@@ -1,4 +1,14 @@
+<button class="btn btn-danger" {{action 'deleteNote'}}>Delete</button>
+{{#if editing}}
+  <button class="btn btn-success" {{action 'saveNote'}}>Edit</button>
+  {{input class="form-control" valueBinding="newTitle"}}
+  {{textarea class="form-control" valueBinding="newBody"}}
+  {{input class="form-control" valueBinding="newPriorityLevel"}}
+  <button {{action 'createNote'}}>Create Note</button>
+{{else}}
+<button class="btn btn-success" {{action 'startEdit'}}>Edit</button>
 <h1>{{title}}</h1>
 <p>
   {{body}}
 </p>
+{{/if}}
