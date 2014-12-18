@@ -1,6 +1,11 @@
 <div class="container">
-  <h1>IronNotes</h1>
-  {{#link-to 'index'}}Home{{/link-to}}
-  {{#link-to 'notes'}}Notes{{/link-to}}
-  {{outlet}}
+  <div class="row">
+    {{#link-to 'index' tagName='h1'}}
+      IronNotes
+    {{/link-to}}
+    {{partial 'navigation'}}
+  </div>
+  <div class="row">
+    {{outlet}}
+  </div>
 </div>

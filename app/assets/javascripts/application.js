@@ -17,4 +17,6 @@
 //= require handlebars
 //= require ember
 //= require ember-data
+//= require moment
+//= require markdown.min
 //= require_tree .

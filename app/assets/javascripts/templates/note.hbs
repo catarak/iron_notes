@@ -1,4 +1,12 @@
-<h1>{{title}}</h1>
-<p>
-  {{body}}
-</p>
+{{#if editing}}
+  <div class='input-group'>
+    {{input action='updateNote' valueBinding='title' class='form-control'}}
+    {{textarea focus-out='updateNote' valueBinding='body' class='form-control'}}
+  </div>
+{{else}}
+  <div {{action 'editNote'}}>
+    <h1 >{{title}}</h1>
+    <p>{{markdown body}}</p>
+  </div>
+  <button {{action 'deleteNote'}} class='btn btn-danger'>Delete Note</button>
+{{/if}}
